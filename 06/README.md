@@ -17,4 +17,5 @@
 - passiveにするにはプロトコルで受け付けるようにする
 - passive viewを利用するデメリットとして、簡単な処理でもmodelが絡む処理では「view→presenter→model→presenter→view」という風になりちょっと面倒くさい
 - ロジックの冗長性を防ぐならSuperVising、プレゼンテーションロジック全部テストしたいならPassive
+- 〇〇Inputプロトコルはその〇〇のファイルの中で継承して、定義するイメージ
 - 
