@@ -32,6 +32,7 @@ final class SearchUserViewController: UIViewController {
 }
 
 extension SearchUserViewController: UISearchBarDelegate {
+    // 入力を受け付ける（viewの役割）
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         presenter.didTapSearchButton(text: searchBar.text)
     }
@@ -64,6 +65,7 @@ extension SearchUserViewController: UITableViewDataSource {
 }
 
 extension SearchUserViewController: SearchUserPresenterOutput {
+    // プロトコルで受け付けることによって、受け身であるということを担保している。こちら側からは何もしない
     func updateUsers(_ users: [User]) {
         tableView.reloadData()
     }

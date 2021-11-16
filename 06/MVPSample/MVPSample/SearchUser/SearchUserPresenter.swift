@@ -41,12 +41,16 @@ final class SearchUserPresenter: SearchUserPresenterInput {
         return users[row]
     }
 
+    // viewから呼び出される
     func didSelectRow(at indexPath: IndexPath) {
+        // これがプレゼンテーションロジック
         guard let user = user(forRow: indexPath.row) else { return }
         view.transitionToUserDetail(userName: user.login)
     }
-
+    
+    // viewから呼び出される
     func didTapSearchButton(text: String?) {
+        // これがプレゼンテーションロジック
         guard let query = text else { return }
         guard !query.isEmpty else { return }
 
